@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 
-const Registration = () => {
+const Registration = ({handleSuccessfulAuth}) => {
   const [form, setState] = useState({
     email: '',
     password: '',
@@ -18,12 +18,16 @@ const Registration = () => {
         password_confirmation: form.passwordConfirmation,
       },
     },
-    { withCredentials: true }).then(response => {
+    { withCredentials: true })
+    .then(response => {
+        if(response.data.status === 'created') {
+            handleSuccessfulAuth(response.data)
+        }
       console.log(response);
     })
-      .catch(error => {
-        console.log(error);
-      });
+    .catch(error => {
+    console.log(error);
+    });
   };
 
   const handleChange = event => {
