@@ -1,11 +1,12 @@
-import React from 'react'
+import React from 'react';
+import Registration from './auth/Registration';
 
-const Home = () => {
-    return (
-        <div>
-            This is home
-        </div>
-    )
-}
+const Home = () => (
+  <div>
+    This is home
+    <Registration />
 
-export default Home
+  </div>
+);
+
+export default Home;

@@ -47,9 +47,7 @@
     "copy-webpack-plugin": "^4.5.2",
     "cross-env": "^5.2.0",
     "css-loader": "^1.0.0",
-    "eslint": "^4.2.0",
     "eslint-loader": "^1.9.0",
-    "eslint-plugin-react": "^7.1.0",
     "express": "^4.16.3",
     "extract-loader": "^2.0.1",
     "file-loader": "^1.1.11",
@@ -77,6 +75,12 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.26.0",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb": "^18.1.0",
+    "eslint-plugin-import": "^2.20.1",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-react-hooks": "^2.5.1",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "uglifyjs-webpack-plugin": "^1.2.7"
   }
