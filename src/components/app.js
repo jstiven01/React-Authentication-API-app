@@ -18,6 +18,14 @@ const App = () => {
     });
   };
 
+  const handleLogout = () => {
+    setState({
+      ...state,
+      loggedInStatus: 'NOT_LOGGED_IN',
+      user: {},
+    })
+  }
+
   const checkLoginStatus = () => {
     axios.get('http://localhost:3001/logged_in',
       { withCredentials: true }).then(response => {
@@ -52,7 +60,7 @@ const App = () => {
             exact
             path="/"
             render={props => (
-              <Home {...props} handleLogin={handleLogin} loggedInStatus={state.loggedInStatus} />
+              <Home {...props} handleLogin={handleLogin} loggedInStatus={state.loggedInStatus} handleLogout={handleLogout} />
             )}
           />
           <Route
