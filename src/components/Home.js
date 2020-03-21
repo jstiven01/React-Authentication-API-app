@@ -1,8 +1,10 @@
 import React from 'react';
 import Registration from './auth/Registration';
+import Login from './auth/Login';
 
-const Home = ({ loggedInStatus, history }) => {
+const Home = ({ handleLogin, loggedInStatus, history }) => {
   const handleSuccessfulAuth = data => {
+    handleLogin(data);
     history.push('/dashboard');
   };
 
@@ -15,6 +17,7 @@ const Home = ({ loggedInStatus, history }) => {
       </h1>
 
       <Registration handleSuccessfulAuth={handleSuccessfulAuth} />
+      <Login handleSuccessfulAuth={handleSuccessfulAuth} />
 
     </div>
   );
